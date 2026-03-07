@@ -1,0 +1,28 @@
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2><span class="italic">Testimonials</span></h2>
+      <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.</p>
+    </div>
+    <div class="testimonials-grid">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <div class="avatar-circle" [style.background]="testimonial.avatarBg">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="testimonial-info">
+              <h4>{{ testimonial.name }}</h4>
+            </div>
+          </div>
+          <p class="testimonial-text">"{{ testimonial.text }}"</p>
+          <div class="stars">
+            @for (star of [1,2,3,4,5]; track star) {
+              <i class="fas fa-star"></i>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

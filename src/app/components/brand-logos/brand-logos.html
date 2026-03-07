@@ -1,0 +1,14 @@
+<section class="brand-logos">
+  <div class="container">
+    <div class="logos-track">
+      @for (brand of brands; track brand.name) {
+        <div class="brand-item">
+          <div class="brand-icon" [style.background]="brand.color">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <span>{{ brand.name }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

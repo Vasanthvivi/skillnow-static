@@ -1,0 +1,52 @@
+<section class="popular-courses">
+  <div class="container">
+    <div class="section-header">
+      <h2><span class="bold">Popular</span> <span class="italic">Courses</span></h2>
+      <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.</p>
+    </div>
+    <div class="courses-grid">
+      @for (course of courses; track course.title) {
+        <div class="course-card">
+          <div class="course-image">
+            <img [src]="course.image" [alt]="course.title">
+            <div class="course-tags">
+              @for (tag of course.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+          <div class="course-content">
+            <h3>{{ course.title }}</h3>
+            <p class="course-description">{{ course.description }}</p>
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>{{ course.date }}</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-clock"></i>
+                <span>{{ course.time }}</span>
+              </div>
+            </div>
+            <div class="course-footer">
+              <div class="instructor">
+                <i class="fas fa-user-circle"></i>
+                <span>{{ course.instructor }}</span>
+              </div>
+              <div class="participants">
+                <i class="fas fa-users"></i>
+                <span>{{ course.participants }} participated</span>
+              </div>
+            </div>
+            <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="pagination-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>

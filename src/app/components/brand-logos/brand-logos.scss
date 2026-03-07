@@ -1,0 +1,41 @@
+.brand-logos {
+  padding: 40px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.logos-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  white-space: nowrap;
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-track {
+    gap: 24px;
+  }
+}
+

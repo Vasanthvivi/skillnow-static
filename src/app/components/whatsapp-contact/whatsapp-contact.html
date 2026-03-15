@@ -1,0 +1,86 @@
+<!-- Fixed WhatsApp button -->
+<button type="button" class="whatsapp-fab" (click)="openPopup()" aria-label="Contact via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</button>
+
+<!-- Modal popup -->
+@if (isOpen) {
+  <div
+    class="whatsapp-modal-backdrop"
+    (click)="closeOnBackdropClick($event)"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="whatsapp-modal-title"
+  >
+    <div class="whatsapp-modal">
+      <button type="button" class="whatsapp-modal-close" (click)="closePopup()" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2 id="whatsapp-modal-title" class="whatsapp-modal-title">Have Questions? Let's Talk!</h2>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input id="name" type="text" formControlName="name" placeholder="Your name" />
+          @if (form.get('name')?.invalid && form.get('name')?.touched) {
+            <span class="error">Please enter your name</span>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">10 Digit Mobile No <span class="required">*</span></label>
+          <input id="mobile" type="tel" formControlName="mobile" placeholder="10 digit number" maxlength="10" />
+          @if (form.get('mobile')?.invalid && form.get('mobile')?.touched) {
+            <span class="error">Enter a valid 10-digit number</span>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input id="email" type="email" formControlName="email" placeholder="your@email.com" />
+          @if (form.get('email')?.invalid && form.get('email')?.touched) {
+            <span class="error">Enter a valid email</span>
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="course">Select Course interested in</label>
+          <select id="course" formControlName="course">
+            <option value="">-- Select --</option>
+            @for (c of courseOptions; track c) {
+              <option [value]="c">{{ c }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="onlineTraining">Yes, I'm Interested in Online Training</label>
+          <select id="onlineTraining" formControlName="onlineTraining">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Select Your City</label>
+          <select id="city" formControlName="city">
+            <option value="">-- Select --</option>
+            @for (city of cityOptions; track city) {
+              <option [value]="city">{{ city }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" formControlName="message" rows="4" placeholder="Your message"></textarea>
+          @if (form.get('message')?.invalid && form.get('message')?.touched) {
+            <span class="error">Please enter your message</span>
+          }
+        </div>
+
+        <button type="submit" class="btn-submit">I'm Interested, Tell me more.</button>
+      </form>
+    </div>
+  </div>
+}

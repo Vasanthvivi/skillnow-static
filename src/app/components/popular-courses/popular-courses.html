@@ -5,7 +5,7 @@
       <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.</p>
     </div>
     <div class="courses-grid">
-      @for (course of courses; track course.title) {
+      @for (course of visibleCourses; track course.title) {
         <div class="course-card">
           <div class="course-image">
             <img [src]="course.image" [alt]="course.title">
@@ -44,9 +44,13 @@
       }
     </div>
     <div class="pagination-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      @for (page of pages; track page) {
+        <span
+          class="dot"
+          [class.active]="page === currentPage"
+          (click)="goToPage(page)">
+        </span>
+      }
     </div>
   </div>
 </section>

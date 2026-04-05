@@ -21,6 +21,21 @@ export interface CourseBatchConfig {
   courses: FeaturedCourseConfig[];
 }
 
+/** Carousel cards in “Popular Courses”; aligns with batch catalog copy */
+export interface PopularCourseConfig {
+  name: string;
+  duration: string;
+  image: string;
+  description: string;
+  tags: string[];
+  /** e.g. "2 months of Live Classes" */
+  liveClassesLabel: string;
+  /** Green line, e.g. "Classes Starting on 28th April 2026" */
+  classesStartNote: string;
+  /** Calendar row; defaults to site defaultScheduleLabel when omitted */
+  scheduleLabel?: string;
+}
+
 export interface AppSiteConfig {
   defaultScheduleLabel?: string;
   defaultInclusions?: string;
@@ -28,6 +43,8 @@ export interface AppSiteConfig {
   batches?: CourseBatchConfig[];
   /** Legacy single-site start line (ignored when batches present) */
   classesStartNote?: string;
+  /** Popular carousel (independent order; typically matches a primary batch) */
+  popularCourses?: PopularCourseConfig[];
   [key: string]: unknown;
 }
 

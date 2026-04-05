@@ -293,5 +293,88 @@
         }
       ]
     }
+  ],
+  "popularCourses": [
+    {
+      "name": "UI Developer",
+      "duration": "2.5 months",
+      "image": "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg",
+      "description": "Master responsive layouts, modern HTML/CSS, JavaScript, and React with live projects—ideal for front-end and product teams.",
+      "tags": ["UI/UX", "Web"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "Java Full Stack Developer",
+      "duration": "3 months",
+      "image": "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg",
+      "description": "Core Java through Spring, Hibernate, and microservices—build end-to-end enterprise apps with mentoring from industry practitioners.",
+      "tags": ["Java", "Full Stack"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": ".Net Full Stack Developer",
+      "duration": "3 months",
+      "image": "https://img.freepik.com/free-vector/desktop-smartphone-app-development_23-2148683810.jpg",
+      "description": "C#, ASP.NET Core, Entity Framework, and Azure deployment patterns for robust full-stack .NET careers.",
+      "tags": [".NET", "Azure"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "Python Full Stack Developer",
+      "duration": "3 months",
+      "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg",
+      "description": "Python, APIs, databases, and modern web frameworks—ship backends and full-stack apps with confidence.",
+      "tags": ["Python", "API"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "DevOps Engineer",
+      "duration": "3 months",
+      "image": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg",
+      "description": "CI/CD, containers, Kubernetes, and cloud automation—streamline delivery and operations with hands-on pipelines.",
+      "tags": ["DevOps", "Cloud"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "Cloud Data Engineer",
+      "duration": "3 months",
+      "image": "https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-812.jpg",
+      "description": "ETL, data warehousing, and cloud-native data services on leading platforms for scalable analytics workloads.",
+      "tags": ["Cloud", "Data"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "AI/ML Engineer",
+      "duration": "3 months",
+      "image": "https://img.freepik.com/free-vector/artificial-intelligence-concept-illustration_114360-7135.jpg",
+      "description": "Machine learning workflows, model training, and MLOps fundamentals aligned with real business use cases.",
+      "tags": ["AI", "ML"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "Network Engineer",
+      "duration": "2.5 months",
+      "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg",
+      "description": "Routing, switching, and enterprise networking design—prepare for advanced certifications and operations roles.",
+      "tags": ["Networking", "Cisco"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    },
+    {
+      "name": "Azure Administrator",
+      "duration": "2 months",
+      "image": "https://img.freepik.com/free-vector/cloud-services-isometric-composition-with-big-cloud-computing-infrastructure-elements-connected-with-dashed-lines-vector-illustration_1284-30495.jpg",
+      "description": "Azure identity, compute, networking, and governance—manage cloud environments with best-practice administration.",
+      "tags": ["Azure", "Cloud"],
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026"
+    }
   ]
 }

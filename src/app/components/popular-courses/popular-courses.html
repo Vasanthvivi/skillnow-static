@@ -2,9 +2,9 @@
   <div class="container">
     <div class="section-header">
       <h2><span class="bold">Popular</span> <span class="italic">Courses</span></h2>
-      <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.</p>
+      <p>Browse our most enrolled courses. Learn from industry experts and join a community of learners.</p>
     </div>
-    <div class="courses-grid">
+    <div class="courses-grid" (mouseenter)="onCoursesHoverStart()" (mouseleave)="onCoursesHoverEnd()">
       @for (course of visibleCourses; track course.title) {
         <div class="course-card">
           <div class="course-image">
@@ -18,27 +18,20 @@
           <div class="course-content">
             <h3>{{ course.title }}</h3>
             <p class="course-description">{{ course.description }}</p>
-            <div class="course-meta">
-              <div class="meta-item">
-                <i class="fas fa-calendar-alt"></i>
-                <span>{{ course.date }}</span>
-              </div>
-              <div class="meta-item">
+            <div class="course-schedule">
+              <div class="schedule-item">
                 <i class="fas fa-clock"></i>
-                <span>{{ course.time }}</span>
+                <span>1-2 Hrs of Live Classes</span>
               </div>
+              <div class="schedule-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Weekend/Weekday Classes</span>
+              </div>
+              <p class="schedule-note">Classes starting on every Weekend</p>
             </div>
-            <div class="course-footer">
-              <div class="instructor">
-                <i class="fas fa-user-circle"></i>
-                <span>{{ course.instructor }}</span>
-              </div>
-              <div class="participants">
-                <i class="fas fa-users"></i>
-                <span>{{ course.participants }} participated</span>
-              </div>
-            </div>
-            <a href="#" class="view-details">View Details <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="view-details" (click)="openCourseDetails(course); $event.preventDefault()">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       }

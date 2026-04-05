@@ -2,15 +2,40 @@
   <div class="container">
     <div class="section-header">
       <h2><span class="italic">Featured</span> Developer<br>Classes</h2>
-      <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.</p>
+      <p>Explore our range of developer and tech courses. Pick a track and start building in-demand skills with live instructors.</p>
     </div>
     <div class="classes-grid">
-      @for (course of courses; track course.name) {
+      @for (course of courses; track course.name + course.classesStartNote) {
         <div class="class-card">
           <div class="class-image">
             <img [src]="course.image" [alt]="course.name">
           </div>
-          <div class="class-name">{{ course.name }}</div>
+          <div class="class-card-footer">
+            <span class="class-name">{{ course.name }}</span>
+            <div class="class-details">
+              <div class="class-details-main">
+                <p class="class-inclusions">{{ course.inclusions }}</p>
+                <ul class="class-features">
+                  <li>
+                    <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+                    <span>Duration: {{ course.duration }}</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-video" aria-hidden="true"></i>
+                    <span>{{ course.liveClassesLabel }}</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                    <span>{{ course.schedule }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="class-details-cta">
+                <p class="class-schedule-note">{{ course.classesStartNote }}</p>
+                <a href="#" class="btn-view-details" (click)="openCourseDetails(course); $event.preventDefault()">View Course Details</a>
+              </div>
+            </div>
+          </div>
         </div>
       }
     </div>

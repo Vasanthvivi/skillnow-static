@@ -44,11 +44,20 @@
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideInRight 0.5s ease both;
 
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   }
+}
+
+.course-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.course-card:nth-child(3) {
+  animation-delay: 0.16s;
 }
 
 .course-image {
@@ -83,6 +92,9 @@
 
 .course-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   h3 {
     font-size: 1.1rem;
@@ -99,12 +111,15 @@
   }
 }
 
-.course-meta {
+.course-schedule {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 8px;
   margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
 
-  .meta-item {
+  .schedule-item {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -116,41 +131,34 @@
       font-size: 0.85rem;
     }
   }
-}
 
-.course-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #f0f0f0;
-
-  .instructor,
-  .participants {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.78rem;
-    color: #888;
-
-    i {
-      color: #6c5ce7;
-    }
+  .schedule-note {
+    font-size: 0.8rem;
+    color: #4ade80;
+    margin: 2px 0 0;
+    font-style: italic;
   }
 }
 
 .view-details {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   color: #6c5ce7;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: gap 0.3s;
+  transition: gap 0.3s, background 0.2s, color 0.2s;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 2px solid #6c9eff;
+  border-radius: 10px;
+  background: rgba(108, 158, 255, 0.06);
 
   &:hover {
+    background: #6c9eff;
+    color: #fff;
     gap: 10px;
   }
 }
@@ -158,19 +166,21 @@
 .pagination-dots {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   margin-top: 40px;
 
   .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: #ddd;
+    background: #b8b5d6;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 
     &.active {
-      background: #6c5ce7;
+      background: #4f46e5;
+      transform: scale(1.15);
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.18);
     }
   }
 }
@@ -184,6 +194,17 @@
 @media (max-width: 600px) {
   .courses-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

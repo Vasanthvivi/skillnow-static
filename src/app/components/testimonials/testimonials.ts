@@ -10,22 +10,22 @@ export class Testimonials {
   testimonials = [
     {
       name: 'Richman Arees',
-      text: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.',
+      text: 'The courses are well structured and the instructors explain concepts clearly. I was able to switch to a developer role after completing the program.',
       avatarBg: '#6c5ce7',
     },
     {
       name: 'Lee Jin Sho',
-      text: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.',
+      text: 'Great learning experience. Live classes and hands-on projects helped me build real skills. Highly recommend for anyone looking to upskill.',
       avatarBg: '#00b894',
     },
     {
       name: 'Angelina Mersa',
-      text: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.',
+      text: 'Flexible schedule and quality content. The support team was very helpful. I landed my current job thanks to the certification.',
       avatarBg: '#e17055',
     },
     {
       name: 'Goshila Guyi',
-      text: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc.',
+      text: 'Best investment in my career. The curriculum is industry-relevant and the instructors know their subject inside out.',
       avatarBg: '#0984e3',
     },
   ];

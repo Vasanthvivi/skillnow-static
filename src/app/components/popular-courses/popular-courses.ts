@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { WhatsAppContactService } from '../../services/whatsapp-contact.service';
 
 interface Course {
   title: string;
   description: string;
   image: string;
   tags: string[];
-  date: string;
-  time: string;
-  instructor: string;
-  participants: number;
 }
 
 @Component({
@@ -17,103 +14,95 @@ interface Course {
   templateUrl: './popular-courses.html',
   styleUrl: './popular-courses.scss',
 })
-export class PopularCourses {
+export class PopularCourses implements OnInit, OnDestroy {
+  constructor(
+    private whatsappContact: WhatsAppContactService,
+    private cdr: ChangeDetectorRef
+  ) {}
+
   currentPage = 0;
   coursesPerPage = 3;
+  private autoSlideTimer: ReturnType<typeof setInterval> | null = null;
+  private isHovered = false;
+
+  ngOnInit(): void {
+    this.startAutoSlide();
+  }
+
+  onCoursesHoverStart(): void {
+    this.isHovered = true;
+  }
+
+  onCoursesHoverEnd(): void {
+    this.isHovered = false;
+  }
+
+  private startAutoSlide(): void {
+    if (this.autoSlideTimer) {
+      clearInterval(this.autoSlideTimer);
+    }
+    this.autoSlideTimer = setInterval(() => {
+      if (this.totalPages === 0 || this.isHovered) {
+        return;
+      }
+      this.currentPage = (this.currentPage + 1) % this.totalPages;
+      this.cdr.detectChanges();
+    }, 2000);
+  }
+
+  ngOnDestroy(): void {
+    if (this.autoSlideTimer) {
+      clearInterval(this.autoSlideTimer);
+      this.autoSlideTimer = null;
+    }
+  }
+
+  openCourseDetails(course: Course): void {
+    this.whatsappContact.openWithCourse({ name: course.title });
+  }
 
   allCourses: Course[] = [
-    // Page 1
-    {
-      title: 'Web Development',
-      description: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc. Itot Europa usa li sam vocabular.',
-      image: 'https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg',
-      tags: ['Web', 'Development'],
-      date: '28 Jan 2023',
-      time: '10:00pm',
-      instructor: 'Monica Angelo',
-      participants: 90,
-    },
-    {
-      title: 'Principles of UI Design',
-      description: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc. Itot Europa usa li sam vocabular.',
-      image: 'https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg',
-      tags: ['UI', 'Design'],
-      date: '22 Jan 2023',
-      time: '9:00pm',
-      instructor: 'Alexander Doe',
-      participants: 85,
-    },
-    {
-      title: 'Integrated Marketing',
-      description: 'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc. Itot Europa usa li sam vocabular.',
-      image: 'https://img.freepik.com/free-vector/digital-marketing-team-with-laptops-light-bulb-marketing-team-metrics-marketing-team-lead-responsibilities-concept-pinkish-coral-bluevector-isolated-illustration_335657-1711.jpg',
-      tags: ['Marketing'],
-      date: '15 Jan 2023',
-      time: '08:00pm',
-      instructor: 'Jojo Angelo',
-      participants: 50,
-    },
-    // Page 2
-    {
-      title: 'Python Full Stack',
-      description: 'Master Python with Django and React to build powerful full-stack web applications from scratch. Learn backend APIs and frontend interfaces.',
-      image: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg',
-      tags: ['Python', 'Full Stack'],
-      date: '10 Feb 2023',
-      time: '7:00pm',
-      instructor: 'Sarah Chen',
-      participants: 120,
-    },
     {
       title: 'DevOps Engineering',
       description: 'Learn CI/CD pipelines, Docker, Kubernetes and cloud deployment strategies to streamline your development workflow and operations.',
       image: 'https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg',
       tags: ['DevOps', 'Cloud'],
-      date: '05 Feb 2023',
-      time: '6:30pm',
-      instructor: 'James Wilson',
-      participants: 75,
     },
-    {
-      title: 'AI & Machine Learning',
-      description: 'Dive into artificial intelligence and machine learning with hands-on projects using TensorFlow and PyTorch frameworks.',
-      image: 'https://img.freepik.com/free-vector/artificial-intelligence-concept-illustration_114360-7135.jpg',
-      tags: ['AI', 'ML'],
-      date: '01 Feb 2023',
-      time: '8:00pm',
-      instructor: 'Priya Sharma',
-      participants: 110,
-    },
-    // Page 3
     {
       title: 'Cloud Data Engineering',
       description: 'Build scalable data pipelines on AWS, Azure and GCP. Learn ETL processes, data warehousing and real-time data processing.',
       image: 'https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-812.jpg',
       tags: ['Cloud', 'Data'],
-      date: '20 Mar 2023',
-      time: '7:30pm',
-      instructor: 'Mike Johnson',
-      participants: 65,
+    },
+    {
+      title: 'AWS Cloud Engineer',
+      description: 'Master core AWS services to deploy, monitor, and scale cloud workloads with security and reliability best practices.',
+      image: 'https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-730.jpg',
+      tags: ['AWS', 'Cloud'],
+    },
+    {
+      title: 'Azure DevOps Engineer',
+      description: 'Automate software delivery with Azure DevOps tools, CI/CD pipelines, infrastructure workflows, and release strategies.',
+      image: 'https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg',
+      tags: ['Azure', 'DevOps'],
+    },
+    {
+      title: 'GCP Cloud Engineer',
+      description: 'Build and manage cloud infrastructure on Google Cloud Platform including compute, networking, storage, and operations.',
+      image: 'https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-730.jpg',
+      tags: ['GCP', 'Cloud'],
     },
     {
       title: 'Cybersecurity Essentials',
       description: 'Protect networks and systems from cyber threats. Learn ethical hacking, penetration testing and security best practices.',
       image: 'https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg',
       tags: ['Security', 'Network'],
-      date: '15 Mar 2023',
-      time: '9:00pm',
-      instructor: 'Lisa Park',
-      participants: 95,
     },
     {
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights using SQL, Python and visualization tools like Tableau and Power BI.',
-      image: 'https://img.freepik.com/free-vector/site-stats-concept-illustration_114360-1434.jpg',
-      tags: ['Data', 'Analytics'],
-      date: '10 Mar 2023',
-      time: '6:00pm',
-      instructor: 'David Brown',
-      participants: 80,
+      title: 'Cisco SD-WAN Solutions',
+      description: 'Learn SD-WAN architecture, policy design, and secure branch connectivity for modern enterprise networking.',
+      image: 'https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg',
+      tags: ['Cisco', 'Network'],
     },
   ];
 

@@ -1,7 +1,9 @@
 <nav class="navbar">
   <div class="container nav-container">
-    <a routerLink="/" class="logo">
-      <span class="logo-skill">Skill</span><span class="logo-know">Know</span>
+    <a routerLink="/" class="logo" aria-label="Auralis Institute">
+      <span class="logo-main">Auralis</span>
+      <span class="logo-divider"></span>
+      <span class="logo-accent">Institute</span>
     </a>
     <ul class="nav-links" [class.open]="menuOpen">
       <li><a routerLink="/" fragment="hero" (click)="menuOpen = false" class="active">Home</a></li>

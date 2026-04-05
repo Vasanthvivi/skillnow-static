@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Subject, takeUntil } from 'rxjs';
+import { WhatsAppContactService } from '../../services/whatsapp-contact.service';
 
-const WHATSAPP_NUMBER = '919707240250'; // Change to your business number (country code + number, no + or spaces)
+const WHATSAPP_NUMBER = '916363258628'; // Change to your business number (country code + number, no + or spaces)
 
 @Component({
   selector: 'app-whatsapp-contact',
@@ -9,9 +11,10 @@ const WHATSAPP_NUMBER = '919707240250'; // Change to your business number (count
   templateUrl: './whatsapp-contact.html',
   styleUrl: './whatsapp-contact.scss',
 })
-export class WhatsAppContact {
+export class WhatsAppContact implements OnInit, OnDestroy {
   isOpen = false;
   form: FormGroup;
+  private destroy$ = new Subject<void>();
 
   courseOptions = [
     'Web Development',
@@ -36,7 +39,10 @@ export class WhatsAppContact {
     'Other',
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private whatsappContact: WhatsAppContactService
+  ) {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       mobile: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
@@ -48,7 +54,29 @@ export class WhatsAppContact {
     });
   }
 
+  ngOnInit(): void {
+    this.whatsappContact.onOpenWithCourse
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((course) => this.openPopupWithCourse(course));
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
   openPopup(): void {
+    this.isOpen = true;
+  }
+
+  openPopupWithCourse(course: { name: string }): void {
+    if (!this.courseOptions.includes(course.name)) {
+      this.courseOptions = [course.name, ...this.courseOptions];
+    }
+    this.form.patchValue({
+      course: course.name,
+      message: `I'm interested in ${course.name}. Please share more details.`,
+    });
     this.isOpen = true;
   }
 

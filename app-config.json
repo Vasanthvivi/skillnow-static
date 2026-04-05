@@ -1,0 +1,297 @@
+{
+  "defaultScheduleLabel": "Weekend/Weekday Classes",
+  "defaultInclusions": "Includes live courses & more",
+  "batches": [
+    {
+      "id": "batch-2026-04-28",
+      "liveClassesLabel": "2 months of Live Classes",
+      "classesStartNote": "Classes Starting on 28th April 2026",
+      "courses": [
+        {
+          "name": "UI Developer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg",
+          "inclusions": "Includes 4 Live Courses: UI/UX, HTML/CSS, JavaScript, React & more"
+        },
+        {
+          "name": "Java Full Stack Developer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg",
+          "inclusions": "Includes 4 Live Courses: Core Java, Spring, Hibernate, Microservices & more"
+        },
+        {
+          "name": ".Net Full Stack Developer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/desktop-smartphone-app-development_23-2148683810.jpg",
+          "inclusions": "Includes 4 Live Courses: C#, ASP.NET, Entity Framework, Azure & more"
+        },
+        {
+          "name": "Python Full Stack Developer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg"
+        },
+        {
+          "name": "MEAN Stack Developer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg"
+        },
+        {
+          "name": "Manual Tester",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/bug-fixing-concept-illustration_114360-4783.jpg"
+        },
+        {
+          "name": "Automation Tester",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/software-testing-concept-illustration_114360-1662.jpg"
+        },
+        {
+          "name": "DevOps Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg"
+        },
+        {
+          "name": "Cloud Data Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-812.jpg"
+        },
+        {
+          "name": "AI/ML Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/artificial-intelligence-concept-illustration_114360-7135.jpg"
+        },
+        {
+          "name": "Big Data Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/big-data-concept-illustration_114360-1325.jpg"
+        },
+        {
+          "name": "AI & Data Science",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/data-inform-illustration-concept_114360-864.jpg"
+        },
+        {
+          "name": "Data Analytics",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/site-stats-concept-illustration_114360-1434.jpg"
+        },
+        {
+          "name": "Salesforce Admin / Dev",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/customer-relationship-management-concept-illustration_114360-7652.jpg"
+        },
+        {
+          "name": "ServiceNow Admin / Dev",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/technical-support-concept-illustration_114360-1190.jpg"
+        },
+        {
+          "name": "Oracle DBA",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/server-concept-illustration_114360-2193.jpg"
+        },
+        {
+          "name": "Oracle HCM Functional Consultant",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg"
+        },
+        {
+          "name": "Network Engineer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        },
+        {
+          "name": "Network Security Engineer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg"
+        },
+        {
+          "name": "Cloud Networking",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-730.jpg"
+        },
+        {
+          "name": "Azure Administrator",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/cloud-services-isometric-composition-with-big-cloud-computing-infrastructure-elements-connected-with-dashed-lines-vector-illustration_1284-30495.jpg"
+        },
+        {
+          "name": "VMware Engineer",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/server-room-rack-blockchain-technology-token-api-access-data-center_39422-442.jpg"
+        }
+      ]
+    },
+    {
+      "id": "batch-2026-04-25",
+      "liveClassesLabel": "3 months of Live Classes",
+      "classesStartNote": "Classes Starting on 25th April 2026",
+      "courses": [
+        {
+          "name": "VMware Administrator",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/server-room-rack-blockchain-technology-token-api-access-data-center_39422-442.jpg"
+        },
+        {
+          "name": "Advanced JavaScript with TypeScript",
+          "duration": "1 month",
+          "image": "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg"
+        },
+        {
+          "name": "Advanced Python Programming",
+          "duration": "1 month",
+          "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg"
+        },
+        {
+          "name": "Azure Cloud Engineer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/cloud-services-isometric-composition-with-big-cloud-computing-infrastructure-elements-connected-with-dashed-lines-vector-illustration_1284-30495.jpg"
+        },
+        {
+          "name": "Azure DevOps Engineer",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg"
+        },
+        {
+          "name": "Azure Solutions Architect",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-812.jpg"
+        },
+        {
+          "name": "Azure Data Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-812.jpg"
+        },
+        {
+          "name": "AWS Cloud Engineer",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-730.jpg"
+        },
+        {
+          "name": "AWS Cloud Security Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg"
+        },
+        {
+          "name": "AWS DevOps Engineer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg"
+        }
+      ]
+    },
+    {
+      "id": "batch-2026-04-20",
+      "liveClassesLabel": "3 months of Live Classes",
+      "classesStartNote": "Classes Starting on 20th April 2026",
+      "courses": [
+        {
+          "name": "AWS Solutions Architect",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-812.jpg"
+        },
+        {
+          "name": "AWS Data Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/big-data-concept-illustration_114360-1325.jpg"
+        },
+        {
+          "name": "GCP Cloud Engineer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/cloud-hosting-concept-illustration_114360-730.jpg"
+        },
+        {
+          "name": "GCP DevOps Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370941.jpg"
+        },
+        {
+          "name": "GCP Data Engineer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/big-data-concept-illustration_114360-1325.jpg"
+        },
+        {
+          "name": "SAP ABAP Developer",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg"
+        },
+        {
+          "name": "SAP FICO Functional Consultant",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg"
+        },
+        {
+          "name": "SAP S/4HANA Consultant",
+          "duration": "1 month",
+          "image": "https://img.freepik.com/free-vector/customer-relationship-management-concept-illustration_114360-7652.jpg"
+        },
+        {
+          "name": "SAP MM Consultant",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/technical-support-concept-illustration_114360-1190.jpg"
+        },
+        {
+          "name": "SAP SD Consultant",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/site-stats-concept-illustration_114360-1434.jpg"
+        },
+        {
+          "name": "SAP BTP Developer",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/desktop-smartphone-app-development_23-2148683810.jpg"
+        },
+        {
+          "name": "SAP Analytics Consultant",
+          "duration": "2.5 months",
+          "image": "https://img.freepik.com/free-vector/site-stats-concept-illustration_114360-1434.jpg"
+        },
+        {
+          "name": "SAP SuccessFactors Consultant",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg"
+        }
+      ]
+    },
+    {
+      "id": "batch-2026-04-14",
+      "liveClassesLabel": "3 months of Live Classes",
+      "classesStartNote": "Classes Starting on 14th April 2026",
+      "courses": [
+        {
+          "name": "Cisco Enterprise Wireless Networks (ENWLSI) 2.0",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        },
+        {
+          "name": "Administering Cisco Solutions (CCNA) v2.2",
+          "duration": "2 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        },
+        {
+          "name": "Cisco SD-WAN Solutions (ENSDWI) v3.0",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        },
+        {
+          "name": "Cisco Firewall Threat Defense and Intrusion Prevention (SFWIPF)",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg"
+        },
+        {
+          "name": "Cisco Enterprise Network Core Technologies (ENCOR) v1.3",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        },
+        {
+          "name": "Cisco Meraki Solutions (ECMS) 1.0 Course",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        },
+        {
+          "name": "Designing Cisco Enterprise Networks (ENSLD) v2.0",
+          "duration": "3 months",
+          "image": "https://img.freepik.com/free-vector/computer-networking-isometric-concept-with-cloud-storage-technology-router-icons-3d-illustration_1284-30995.jpg"
+        }
+      ]
+    }
+  ]
+}

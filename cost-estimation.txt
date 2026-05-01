@@ -1,0 +1,101 @@
+===============================================================
+       COST ESTIMATION - SkillKnow Landing Page
+===============================================================
+
+Project: SkillKnow - Course Learning Platform (Landing Page)
+Type: Static Front-End SPA (No Backend/API)
+Technology: Angular 21, SCSS, HTML
+Hosting: GitHub Pages (Free)
+
+===============================================================
+                    WHAT WAS BUILT
+===============================================================
+
+1.  Angular 21 SPA with routing & module setup
+2.  10 Components:
+    - Navbar (sticky, responsive, mobile hamburger menu)
+    - Hero Section (headline, description, illustration)
+    - Brand Logos Strip
+    - Our Best Services (3 feature cards)
+    - Featured Developer Classes (22 course cards in grid)
+    - Popular Courses (9 courses with pagination)
+    - Testimonials (4 review cards with ratings)
+    - CTA Banner (call-to-action section)
+    - Footer (links, social icons, copyright)
+    - Home Page (wrapper component)
+3.  Responsive Design (Desktop, Tablet, Mobile)
+4.  Interactive Features:
+    - Mobile menu toggle
+    - Pagination with dot navigation
+    - Hover animations & transitions
+    - Smooth anchor scrolling
+5.  GitHub Pages Deployment Setup
+
+Estimated Development Time: 10 - 15 hours
+
+===============================================================
+               INDIAN MARKET RATES (INR)
+===============================================================
+
+Level                     Rate/Hr        Hours      Total Cost
+---------------------------------------------------------------
+Freelancer (Junior)       300 - 500      15 - 20    5,000 - 10,000
+Freelancer (Mid-Level)    800 - 1,500    10 - 15    10,000 - 20,000
+Freelancer (Senior)       1,500 - 3,000  8 - 12     15,000 - 35,000
+Agency (Small)            Fixed Price    --          25,000 - 60,000
+Agency (Established)      Fixed Price    --          50,000 - 1,50,000
+
+===============================================================
+             INTERNATIONAL MARKET RATES (USD)
+===============================================================
+
+Level                     Rate/Hr        Hours      Total Cost
+---------------------------------------------------------------
+Freelancer (Junior)       $15 - $25      15 - 20    $250 - $500
+Freelancer (Mid-Level)    $40 - $75      10 - 15    $500 - $1,000
+Freelancer (Senior)       $80 - $150     8 - 12     $800 - $1,800
+Agency                    Fixed Price    --          $2,000 - $5,000
+
+===============================================================
+        FAIR MARKET VALUE FOR THIS PROJECT
+===============================================================
+
+  INR:  Rs. 8,000 - Rs. 25,000
+  USD:  $300 - $800
+
+  (Static front-end only, no backend, free hosting)
+
+===============================================================
+              ADDITIONAL FEATURES & COSTS
+===============================================================
+
+Add-on Feature                           Extra Cost (INR)
+---------------------------------------------------------------
+Custom illustrations/graphics            +5,000 - 15,000
+Backend API integration                  +10,000 - 30,000
+Admin panel / CMS                        +20,000 - 50,000
+Authentication (login/signup)            +8,000 - 20,000
+Payment gateway integration              +10,000 - 25,000
+SEO optimization                         +3,000 - 8,000
+Domain + premium hosting (yearly)        +1,000 - 5,000/yr
+Email integration (contact form)         +3,000 - 8,000
+Course enrollment system                 +15,000 - 40,000
+Video streaming integration              +20,000 - 50,000
+
+===============================================================
+                       NOTES
+===============================================================
+
+- All prices are approximate and may vary based on
+  developer experience, location, and project complexity.
+- This estimation is for a STATIC landing page only.
+- Adding backend, database, user management, and payment
+  features would significantly increase the total cost.
+- Ongoing maintenance costs are not included.
+- Images used are from free stock (Freepik). Custom
+  illustrations would add to the cost.
+
+===============================================================
+  Generated on: March 2026
+===============================================================
+

@@ -81,3 +81,11 @@ img {
 html {
   scroll-behavior: smooth;
 }
+
+/* In-page targets: offset for sticky navbar */
+#hero,
+#about,
+#courses,
+#contact {
+  scroll-margin-top: 88px;
+}

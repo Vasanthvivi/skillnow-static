@@ -208,3 +208,116 @@
   }
 }
 
+.courses-grid--skeleton {
+  min-height: 420px;
+}
+
+.skeleton-card {
+  pointer-events: none;
+  animation: none;
+
+  &:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .skeleton-image-wrap .skeleton-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    border-radius: 0;
+  }
+
+  .skeleton-tags {
+    z-index: 1;
+  }
+
+  .skeleton-tag {
+    display: inline-block;
+    width: 48px;
+    height: 22px;
+    border-radius: 20px;
+
+    &:last-child {
+      width: 62px;
+    }
+  }
+}
+
+.skeleton-block {
+  overflow: hidden;
+}
+
+.skeleton-content .skeleton-line {
+  height: 11px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+
+  &--title {
+    height: 15px;
+    width: 78%;
+    margin-bottom: 14px;
+  }
+
+  &--medium {
+    width: 92%;
+  }
+
+  &--schedule {
+    height: 10px;
+    width: 88%;
+    margin-bottom: 8px;
+  }
+
+  &--note {
+    height: 11px;
+    width: 72%;
+    margin: 6px 0 0;
+  }
+}
+
+.skeleton-schedule {
+  margin: 14px 0 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.skeleton-btn {
+  height: 42px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 14px;
+}
+
+@keyframes popular-skeleton-shimmer {
+  from {
+    background-position: 130% 0;
+  }
+  to {
+    background-position: -130% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(105deg, #e4e4ec 38%, #f2f2f8 50%, #e4e4ec 62%);
+  background-size: 220% 100%;
+  animation: popular-skeleton-shimmer 1.35s ease-in-out infinite;
+}
+
+.skeleton-card:nth-child(2) .skeleton-shimmer {
+  animation-delay: 0.1s;
+}
+
+.skeleton-card:nth-child(3) .skeleton-shimmer {
+  animation-delay: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer {
+    animation: none;
+    background: #e4e4ec;
+  }
+}
+

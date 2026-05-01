@@ -37,12 +37,20 @@ export class PopularCourses implements OnInit, OnDestroy {
   /** Populated from app-config.json */
   allCourses: PopularCourseView[] = [];
 
+  /** Shown until app-config.json finishes loading */
+  isLoading = true;
+
+  /** Placeholder count matches first carousel page */
+  readonly skeletonSlots = [1, 2, 3] as const;
+
   ngOnInit(): void {
     this.http.get<AppSiteConfig>(APP_CONFIG_URL).subscribe({
       next: (config) => this.applyConfig(config),
       error: () => {
         this.allCourses = [];
+        this.isLoading = false;
         this.startAutoSlide();
+        this.cdr.detectChanges();
       },
     });
   }
@@ -58,6 +66,7 @@ export class PopularCourses implements OnInit, OnDestroy {
     if (this.currentPage >= this.totalPages) {
       this.currentPage = 0;
     }
+    this.isLoading = false;
     this.startAutoSlide();
     this.cdr.detectChanges();
   }

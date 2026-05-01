@@ -4,50 +4,83 @@
       <h2><span class="bold">Popular</span> <span class="italic">Courses</span></h2>
       <p>Browse our most enrolled courses. Learn from industry experts and join a community of learners.</p>
     </div>
-    <div class="courses-grid" (mouseenter)="onCoursesHoverStart()" (mouseleave)="onCoursesHoverEnd()">
-      @for (course of visibleCourses; track course.name) {
-        <div class="course-card">
-          <div class="course-image">
-            <img [src]="course.image" [alt]="course.name">
-            <div class="course-tags">
-              @for (tag of course.tags; track tag) {
-                <span class="tag">{{ tag }}</span>
-              }
+    @if (isLoading) {
+      <div
+        class="courses-grid courses-grid--skeleton"
+        aria-busy="true"
+        aria-label="Loading popular courses">
+        @for (slot of skeletonSlots; track slot) {
+          <div class="course-card skeleton-card">
+            <div class="course-image skeleton-image-wrap" aria-hidden="true">
+              <div class="skeleton-block skeleton-image skeleton-shimmer"></div>
+              <div class="course-tags skeleton-tags">
+                <span class="skeleton-block skeleton-tag skeleton-shimmer"></span>
+                <span class="skeleton-block skeleton-tag skeleton-shimmer"></span>
+              </div>
+            </div>
+            <div class="course-content skeleton-content">
+              <div class="skeleton-block skeleton-line skeleton-line--title skeleton-shimmer"></div>
+              <div class="skeleton-block skeleton-line skeleton-shimmer"></div>
+              <div class="skeleton-block skeleton-line skeleton-line--medium skeleton-shimmer"></div>
+              <div class="skeleton-schedule">
+                <div class="skeleton-block skeleton-line skeleton-line--schedule skeleton-shimmer"></div>
+                <div class="skeleton-block skeleton-line skeleton-line--schedule skeleton-shimmer"></div>
+                <div class="skeleton-block skeleton-line skeleton-line--schedule skeleton-shimmer"></div>
+                <div class="skeleton-block skeleton-line skeleton-line--note skeleton-shimmer"></div>
+              </div>
+              <div class="skeleton-block skeleton-btn skeleton-shimmer"></div>
             </div>
           </div>
-          <div class="course-content">
-            <h3>{{ course.name }}</h3>
-            <p class="course-description">{{ course.description }}</p>
-            <div class="course-schedule">
-              <div class="schedule-item">
-                <i class="fas fa-hourglass-half" aria-hidden="true"></i>
-                <span>Duration: {{ course.duration }}</span>
+        }
+      </div>
+    } @else {
+      <div class="courses-grid" (mouseenter)="onCoursesHoverStart()" (mouseleave)="onCoursesHoverEnd()">
+        @for (course of visibleCourses; track course.name) {
+          <div class="course-card">
+            <div class="course-image">
+              <img [src]="course.image" [alt]="course.name">
+              <div class="course-tags">
+                @for (tag of course.tags; track tag) {
+                  <span class="tag">{{ tag }}</span>
+                }
               </div>
-              <div class="schedule-item">
-                <i class="fas fa-video" aria-hidden="true"></i>
-                <span>{{ course.liveClassesLabel }}</span>
-              </div>
-              <div class="schedule-item">
-                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                <span>{{ course.scheduleLabel }}</span>
-              </div>
-              <p class="schedule-note">{{ course.classesStartNote }}</p>
             </div>
-            <a href="#" class="view-details" (click)="openCourseDetails(course); $event.preventDefault()">
-              View Details <i class="fas fa-arrow-right"></i>
-            </a>
+            <div class="course-content">
+              <h3>{{ course.name }}</h3>
+              <p class="course-description">{{ course.description }}</p>
+              <div class="course-schedule">
+                <div class="schedule-item">
+                  <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+                  <span>Duration: {{ course.duration }}</span>
+                </div>
+                <div class="schedule-item">
+                  <i class="fas fa-video" aria-hidden="true"></i>
+                  <span>{{ course.liveClassesLabel }}</span>
+                </div>
+                <div class="schedule-item">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span>{{ course.scheduleLabel }}</span>
+                </div>
+                <p class="schedule-note">{{ course.classesStartNote }}</p>
+              </div>
+              <a href="#" class="view-details" (click)="openCourseDetails(course); $event.preventDefault()">
+                View Details <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
-        </div>
-      }
-    </div>
-    <div class="pagination-dots">
-      @for (page of pages; track page) {
-        <span
-          class="dot"
-          [class.active]="page === currentPage"
-          (click)="goToPage(page)">
-        </span>
-      }
-    </div>
+        }
+      </div>
+    }
+    @if (!isLoading && totalPages > 1) {
+      <div class="pagination-dots">
+        @for (page of pages; track page) {
+          <span
+            class="dot"
+            [class.active]="page === currentPage"
+            (click)="goToPage(page)">
+          </span>
+        }
+      </div>
+    }
   </div>
 </section>

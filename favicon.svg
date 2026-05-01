@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Career">
+  <defs>
+    <linearGradient id="careerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6c5ce7"/>
+      <stop offset="100%" stop-color="#a29bfe"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#1a1a2e"/>
+  <!-- handle -->
+  <path
+    d="M11 13V11a5 5 0 0 1 10 0v2"
+    fill="none"
+    stroke="url(#careerGrad)"
+    stroke-width="2"
+    stroke-linecap="round"/>
+  <!-- case -->
+  <rect x="6" y="13" width="20" height="14" rx="2.5" fill="url(#careerGrad)"/>
+  <!-- lid line -->
+  <rect x="6" y="13" width="20" height="4" rx="2.5" fill="#8b7cf8" opacity=".35"/>
+  <!-- clasp -->
+  <rect x="14" y="18" width="4" height="5" rx="1" fill="#1a1a2e" opacity=".45"/>
+</svg>

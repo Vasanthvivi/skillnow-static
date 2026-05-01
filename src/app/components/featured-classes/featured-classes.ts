@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
   AppSiteConfig,
   FeaturedCourseView,
@@ -18,17 +18,26 @@ const APP_CONFIG_URL = 'app-config.json';
 export class FeaturedClasses implements OnInit {
   constructor(
     private whatsappContact: WhatsAppContactService,
-    private http: HttpClient
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
   ) {}
 
   /** Populated from app-config.json (batches → flattened) */
   courses: FeaturedCourseView[] = [];
+
+  /** Shown until app-config.json finishes loading */
+  isLoading = true;
+
+  /** One grid row on desktop (4 columns) */
+  readonly skeletonSlots = [1, 2, 3, 4] as const;
 
   ngOnInit(): void {
     this.http.get<AppSiteConfig>(APP_CONFIG_URL).subscribe({
       next: (config) => this.applyConfig(config),
       error: () => {
         this.courses = [];
+        this.isLoading = false;
+        this.cdr.detectChanges();
       },
     });
   }
@@ -41,6 +50,8 @@ export class FeaturedClasses implements OnInit {
 
     if (!config.batches?.length) {
       this.courses = [];
+      this.isLoading = false;
+      this.cdr.detectChanges();
       return;
     }
 
@@ -53,6 +64,8 @@ export class FeaturedClasses implements OnInit {
         inclusions: c.inclusions ?? inclusionsDefault,
       }))
     );
+    this.isLoading = false;
+    this.cdr.detectChanges();
   }
 
   openCourseDetails(course: { name: string }): void {
